@@ -85,6 +85,11 @@ public class EditNote extends AppCompatActivity {
         finish();
     }
     public void ShareNote(){
-
+        Intent share=new Intent(Intent.ACTION_SEND);
+        String title,desc,note;
+        note="Title :\n"+edtitle.getText().toString()+"\n"+"Description :\n"+edcontent.getText().toString();
+        share.putExtra(Intent.EXTRA_TEXT,note);
+        share.setType("text/plain");
+        startActivity(share);
     }
 }

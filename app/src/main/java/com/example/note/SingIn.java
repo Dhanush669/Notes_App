@@ -83,6 +83,7 @@ public class SingIn extends AppCompatActivity {
         delcont=intent.getStringExtra("delcont");
         deltime=intent.getStringExtra("date");
         if(del==1){
+            del=0;
             Restore();
         }
         addnote.setOnClickListener(new View.OnClickListener() {
